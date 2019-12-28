@@ -11,6 +11,7 @@ We provide state-of-the-art training recipes for the following speech datasets:
 
 ### What's New:
 
+- April 2020: Both E2E LF-MMI (using [PyChain](https://github.com/YiwenShaoStephen/pychain)) and Cross-entropy training for hybrid ASR are now supported. WSJ recipes are provided [here](https://github.com/freewym/espresso/tree/master/examples/asr_wsj/run_chain_e2e.sh) and [here](https://github.com/freewym/espresso/tree/master/examples/asr_wsj/run_xent.sh) as examples.
 - March 2020: SpecAugment is supported and relevant recipes are released.
 - September 2019: We are in an effort of isolating Espresso from fairseq, resulting in a standalone package that can be directly `pip install`ed.
 
@@ -35,6 +36,7 @@ cd espresso
 pip install --editable .
 pip install kaldi_io
 pip install sentencepiece
+edit $PYTHON_DIR vairable on top of espresso/tools/Makefile
 cd espresso/tools; make KALDI=<path/to/a/compiled/kaldi/directory>
 ```
 add your Python path to `PATH` variable in `examples/asr_<dataset>/path.sh`, the current default is `~/anaconda3/bin`.

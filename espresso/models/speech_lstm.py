@@ -387,7 +387,7 @@ class SpeechLSTMEncoder(FairseqEncoder):
         encoder_padding_mask = padding_mask.t()
 
         return {
-            'encoder_out': (x,),
+            'encoder_out': (x, src_lengths.unsqueeze(0)),
             'encoder_padding_mask': encoder_padding_mask if encoder_padding_mask.any() else None
         }
 
